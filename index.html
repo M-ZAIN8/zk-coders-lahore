@@ -5,11 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZK Coders - Lahore</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #1e1e1e;
+      color: #c5f76d;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #c5f76d;
+      width: 0;
+      animation: typing 5s steps(60, end) forwards, blink 0.8s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    nav {
+      background: #444;
+      text-align: center;
+      padding: 0.5em;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    footer a {
+      color: #1dbf73;
+    }
+    #scrollBubble {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1dbf73;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+    #scrollBubble img {
+      width: 32px;
+      height: 32px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>ZK Coders</h1>
-    <p>Expert Java, C++, Swift, and Python Programming - Lahore, Pakistan</p>
+    <h2> And Design by</h2>
+    <p>Expert Java, C++, Swift, and Python Programming and UI/UX Design  - Lahore, Pakistan.</p>
+    <p>The designer of this website is Zain Khursheed</p>
   </header>
 
   <nav>
@@ -22,6 +103,7 @@
   <section id="home">
     <h2>Welcome</h2>
     <p>We provide clean, efficient code in Java, C++, Swift, and Python for all your software and app development needs.</p>
+    <p>Visit us: <a href="https://zkcoder.com" target="_blank">zkcoder.com</a></p>
   </section>
 
   <section id="services">
@@ -31,24 +113,53 @@
       <li>C++ System Applications</li>
       <li>iOS App Development (Swift)</li>
       <li>Python Automation and Web</li>
+      <li>UI/UX Design & Wireframing</li>
     </ul>
   </section>
 
   <section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>Visit our GitHub to see past work: <a href="https://github.com/M-ZAIN8" target="_blank">github.com/M-ZAIN8</a></p>
+    <h2>Portfolio and Github</h2>
+    
+    
+    <p>Check code on github</p>
+        
+    <p>Visit our GitHub to see past work: </p>
+    <a href="https://github.com/M-ZAIN8" target="_blank">github.com/M-ZAIN8</a>
+  <p>Hire us on Fiverr:</p>
+    <a href="https://www.fiverr.com/s/0bVlq4x" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Fiverr_Logo_2020.svg" alt="Fiverr" style="height: 40px; margin-top: 10px;">
+    </a>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:zkcoderslahore@gmail.com">zkcoderslahore@gmail.com</a></p>
+    <p>Email: <a href="mailto:zkcoders@gmail.com">zkcoders@gmail.com</a></p>
     <p>Phone/WhatsApp: <a href="https://wa.me/923207757231" target="_blank">+92-3207757231</a></p>
     <p>Location: Lahore, Pakistan</p>
     <iframe src="https://maps.google.com/maps?q=Lahore,%20Pakistan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" frameborder="0"></iframe>
   </section>
 
   <footer>
-    <p>&copy; 2025 ZK Coders, Lahore</p>
+    <p>&copy; 2025 ZK Coders, Lahore — <a href="https://zkcoder.com" target="_blank">zkcoder.com</a></p>
   </footer>
+
+  <!-- Scroll Bubble Icon -->
+  <div id="scrollBubble" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Fiverr_Logo_2020.svg" alt="Fiverr">
+  </div>
+
+  <script>
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const bubble = document.getElementById('scrollBubble');
+      if (window.scrollY < lastScrollY && window.scrollY > 100) {
+        bubble.style.display = 'flex';
+      } else {
+        bubble.style.display = 'none';
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
+
 </body>
 </html>
